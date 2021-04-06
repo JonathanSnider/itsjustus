@@ -6,6 +6,7 @@ import datetime
 from datetime import date
 import time
 import sqlite3
+import json
 
 client = commands.Bot(command_prefix = '!')
 # Remove default help command
@@ -139,4 +140,8 @@ async def on_ready():
     print("Starting Auto Schedule Posting")
     autoPostSchedule.start()
 
-client.run("NzI0MDc2Njc5NDgzNDkwNDQ0.XxhOvw.iPhqyNQVAmavH1LV54VQAnyQyMA")
+# Run the bot
+with open('tokens.json', 'r') as f:
+  jsonInfoData = json.load(f)
+TOKEN = jsonInfoData["bot"]
+client.run(TOKEN)
