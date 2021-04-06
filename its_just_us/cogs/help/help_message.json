@@ -1,0 +1,3 @@
+{
+  "schedule":"{0} = Artisans Wing\n{1} = World Travels\n{2} = Assassins League\n{3} = Questers Mark\n{4} = Rogue Runners\n{5} = The More The Merrier\n\n{6} = Sunday\n{7} = Monday\n{8} = Tuesday\n{9} = Wednesday\n{10} = Thursday\n{11} = Friday\n{12} = Saturday\n\n{13} = Confirm Schedule Change\n{14} = Message current Day and Branch selections for the schedule\n{15} = Delete all occurences of events with your tag on the day selected. MUST have a day selected to use.\n\nFormat: !schedule [title]\nEx: !schedule Jun 21 - Jun 27\n\nTo make a schedule change, select a branch and day using the appropriate emojis. If both a day and branch have been chosen, select {13} to change the schedule."
+}
