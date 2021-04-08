@@ -1,5 +1,5 @@
-dbs/posted_schedules.db
-dbs/schedules.db
-tokens.json
-people.json
+itsjustus/dbs/posted_schedules.db
+itsjustus/dbs/schedules.db
+itsjustus/tokens.json
+itsjustus/people.json
 *.pyc
