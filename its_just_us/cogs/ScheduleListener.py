@@ -106,13 +106,12 @@ class ScheduleListener (commands.Cog):
 
   @commands.Cog.listener()
   async def on_raw_reaction_add(self, payload):
-    if(str(payload.user_id) != "724076679483490444"):
+    with open('tokens.json') as f:
+        tokens = json.load(f)
+    user_ids = tokens["user_ids"]
+    if(payload.user_id != user_ids["bot"]): 
       role_emoji_dict = {"Artisans Wing": "🎨", "World Travels":"🗺️", "Assassins League":"🗡️", "Questers Mark":"☠️", "Rogue Runners":"🏃‍♂️", "The More The Merrier":"👥"}
       day_emoji_dict = {"Sunday":"☀️", "Monday":"🇲", "Tuesday":"🇹","Wednesday":"🇼","Thursday":"🔨","Friday":"🇫","Saturday":"🇸"}
-
-      with open('tokens.json') as f:
-        tokens = json.load(f)
-      user_ids = tokens["user_ids"]
 
       conn = sqlite3.connect('dbs/schedules.db')
       c = conn.cursor()
